@@ -1,0 +1,4 @@
+node_modules/
+cheese.log
+dist/
+config.json
