@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const request = require("request");
 const express = require("express");
-const logger = require("utils/logger.js");
+const logger = require("../utils/logger.js");
 
 // 加载配置文件（主要为接口的调用）
 let config = JSON.parse(fs.readFileSync('config.json', 'utf8'));
