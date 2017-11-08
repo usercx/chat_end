@@ -6,12 +6,12 @@ const logger = require("../utils/logger.js");
 
 // 加载配置文件（主要为接口的调用）
 let config = JSON.parse(fs.readFileSync('config.json', 'utf8'));
-let appid = config.appid;
-let appkey = config.appkey;
+let appid = config.chat_appid;
+let appkey = config.chat_appkey;
 
 let router = express.Router();
 
-router.get("/chat", function (req, res) {
+router.get("/", function (req, res) {
     let message = req.query.message;
     logger.info("请求信息：" + message + "\n");
     let returnValue = {};

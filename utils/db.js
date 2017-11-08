@@ -1,0 +1,10 @@
+const mysql = require('mysql');
+const fs = require("fs");
+let config = JSON.parse(fs.readFileSync('config.json', 'utf8'));
+let host = config.sql.host;
+let user = config.sql.user;
+let password = config.sql.password;
+let database = config.sql.database;
+const connection = mysql.createConnection({host: host, user: user, password: password, database: database});
+connection.connect();
+module.exports = connection;
