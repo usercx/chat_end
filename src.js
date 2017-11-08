@@ -15,7 +15,7 @@ app.use("/chat", require("./routes/chat.js"));
 app.use("/weather", require("./routes/weather.js"));
 
 app.use("/", function (req, res) {
-	res.sendFile(__dirname + "/dist/index.html");
+  res.sendFile(__dirname + "/dist/index.html");
 });
 
 http.createServer(app).listen(port);
