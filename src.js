@@ -11,6 +11,11 @@ let app = express();
 
 app.use(express.static(path.join(__dirname, 'dist')));
 
+app.use("/", function(req, res, next){
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  next();
+});
+
 app.use("/chat", require("./routes/chat.js"));
 app.use("/weather", require("./routes/weather.js"));
 
