@@ -5,7 +5,7 @@ const path = require("path");
 const con = require("./utils/db.js");
 const logger = require("./utils/logger.js");
 
-const port = 4666;
+const port = 5666;
 
 let app = express();
 

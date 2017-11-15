@@ -11,7 +11,7 @@ let appkey = config.chat_appkey;
 
 let router = express.Router();
 
-router.get("/", function (req, res) {
+router.get("/getMessage", function (req, res) {
   let message = req.query.message,
     returnValue = {},
     _res = res;
