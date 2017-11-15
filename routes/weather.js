@@ -408,6 +408,7 @@ router.get("/getWeatherInfo", function (req, res) {
   };
   // 获取天气信息
   let getWeather = function(loc){
+    logger.info(loc);
     let requestUrl = "https://free-api.heweather.com/s6/weather?location=" + loc + "&key=" + appkey,
       returnObj = getReturnObj();
     request(encodeURI(requestUrl), function(err, data){
